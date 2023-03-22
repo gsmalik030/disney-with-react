@@ -1,14 +1,32 @@
 import React from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+// import {useHistory} from "react-router-dom"
 import styled from 'styled-components';
 import { auth, provider } from '../firebase.js';
+import { userName, userPhoto, setUserLoginDetails } from '../features/user/userSlice.js';
 const Header = () => {
+
+  const dispatch = useDispatch();
+  // const history = useHistory();
+  const username = useSelector(userName);
+  const userphoto = useSelector(userPhoto)
 
   const heandleAuth= ()=>{
     auth.signInWithPopup(provider).then((result)=>{
-      console.log(result)
+      setUser(result.user);
     }).catch((error)=>{
       alert(error.message)
     })
+  }
+
+  const setUser = (user) =>{
+    dispatch(
+      setUserLoginDetails({
+        name:user.displayName,
+        email:user.email,
+        photo:user.photoURL
+      })
+    )
   }
 
   return (
@@ -16,6 +34,9 @@ const Header = () => {
       <Logo>
         <img src='/images/logo.svg' alt='Disney+' />
       </Logo>
+      {!username ? <Login onClick={heandleAuth}>login</Login> : <>
+
+      
       <Navmenu>
         <a href='/home'>
           <img src='/images/home-icon.svg' alt='HOME' />
@@ -42,7 +63,8 @@ const Header = () => {
           <span>SERIES</span>
         </a>
       </Navmenu>
-      <Login onClick={heandleAuth}>login</Login>
+      <UserImage src={userphoto} alt={username}></UserImage>
+      </> }
     </Nav>
   );
 };
@@ -144,4 +166,9 @@ const Login = styled.a`
     border-color: transparent;
   }
 `;
+
+const UserImage= styled.img`
+  height: 80%;
+  border-radius: 50%;
+`
 export default Header;
