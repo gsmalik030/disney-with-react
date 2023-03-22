@@ -58,6 +58,11 @@ max-width:650px;
 width:100%; 
 display:flex;
 flex-direction:column;
+justify-content:center;
+align-items:center;
+margin-bottom:2vw;
+transition-timing-function:ease-out;
+transition:opacity 0.2s;
 `;
 
 const CTALogoOne = styled.img`
