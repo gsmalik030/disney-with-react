@@ -37,15 +37,15 @@ const Home = () => {
             break;
         }
       });
+      dispatch(
+        setMovies({
+          recommend: recommends,
+          newDisney: newDisneys,
+          original: originals,
+          trending: trendings,
+        })
+      );
     });
-    dispatch(
-      setMovies({
-        recommend: recommends,
-        newDisney: newDisneys,
-        original: originals,
-        trending: trendings,
-      })
-    );
   },[username]);
 
   return (
