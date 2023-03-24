@@ -42,8 +42,7 @@
 
 ### Key Features <a name="add components"></a>
 
-- Showcase covid 19 statistics
-- Show details stats about covid
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -148,3 +147,4 @@ If you like this project, please, give a star.
 This project is [MIT](MIT.md) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
+Thank you
