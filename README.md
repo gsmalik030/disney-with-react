@@ -24,7 +24,7 @@
 
 # 📖 disney-with-react <a name="about-project"></a>
 
-**disney-with-react** is a showcase for books.
+**disney-with-react** 
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -42,15 +42,14 @@
 
 ### Key Features <a name="add components"></a>
 
-- Showcase covid 19 statistics
-- Show details stats about covid
+
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo](https://disneyplus-with-react.onrender.com) 
+- [Live Demo](https://disneyplus-clone-44d0e.web.app) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
